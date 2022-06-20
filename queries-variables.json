@@ -1,0 +1,18 @@
+{
+  "getPersonId": 0,
+  "personInput": {
+    "name": "John",
+    "email": "john@gmail.com",
+    "gender": "male",
+    "age": 20,
+    "cars": [
+      {
+        "model": "Jaguar",
+        "year": 2020,
+        "fuel": "Diesel"
+      }
+    ]
+  },
+  "removePersonId": 10,
+  "getTodoId": 1362
+}

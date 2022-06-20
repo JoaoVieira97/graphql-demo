@@ -1,0 +1,83 @@
+query GetPersonsQuery {
+  getPersons {
+    id
+    name
+    age
+    cars {
+      model
+      year
+    }
+  }
+}
+
+query GetPersonQuery($getPersonId: Int!) {
+  getPerson (id: $getPersonId){
+    id
+    name
+    cars {
+      model
+      year
+    }
+  }
+}
+
+query GetPersonsCarsQuery {
+  getPersonsCars {
+    model
+    year
+    fuel
+  }
+}
+
+fragment PersonFragment on Person {
+  id
+  name
+  email
+  age
+}
+
+fragment CarFragment on Car {
+  model
+  year
+}
+
+mutation AddPersonMutation($personInput: PersonInput!) {
+  addPerson(person: $personInput) {
+    id
+  }
+}
+
+mutation RemovePersonMutation($removePersonId: Int!) {
+  removePerson(id: $removePersonId) {
+    id
+    name
+  }
+}
+
+query GetTodoListQuery {
+  getTodos {
+    id
+    user_id
+    title
+    due_on
+    status
+  }
+}
+
+query GetTodoQuery($getTodoId: Int!) {
+  getTodo(id: $getTodoId) {
+    title
+    status
+  }
+}
+
+query GetTodosAndPersonsQuery {
+  getTodos {
+    title
+    status
+  }
+  getPersons {
+    name
+    age
+  }
+}
