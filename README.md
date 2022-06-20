@@ -8,18 +8,18 @@ Developed using **Node.js**, **apollo-server** and **graphql-tools**.
 
 The server offers operations (*Queries* and *Mutations*) on two different "*schemas*":
 * Persons
-    * Using an array and interaction with it to simulate the access to a database ([this array](src/datasources/persons-db.js))
+    * Using an array ([here](src/datasources/persons-db.js)) and interacting with it to simulate the access to a database
     * Operations:
-        * Get the full list of persons (**getPersons** query)
-        * Get a specific person (**getPerson** query)
-        * Get the list of cars of all the persons (**getPersonsCars** query)
-        * Add a person (**addPerson** mutation)
-        * Remove a person (**removePerson** mutation)
+        * Get the full list of persons (**getPersons** Query)
+        * Get a specific person (**getPerson** Query)
+        * Get the list of cars of all the persons (**getPersonsCars** Query)
+        * Add a person (**addPerson** Mutation)
+        * Remove a person (**removePerson** Mutation)
 * Todos
     * Using `https://gorest.co.in/public/v2/todos` and `https://gorest.co.in/public/v2/todos/${id}` endpoints
     * Operations:
-        * Get the full list of todos (**getTodos** query)
-        * Get a specific todo (**getTodo** query)
+        * Get the full list of todos (**getTodos** Query)
+        * Get a specific todo (**getTodo** Query)
 
 You can use [this](queries.graphql) queries as an example to interact with the server with [this](queries-variables.json) variables.
 
